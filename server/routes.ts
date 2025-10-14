@@ -10,6 +10,11 @@ import userRoutes from "./userRoutes";
 import path from "path";
 
 export async function registerRoutes(app: Express): Promise<Server> {
+
+   app.get("/health", (req, res) => {
+  res.status(200).send("Healthy");
+});
+
   // Authentication routes
   app.use("/auth", authRoutes);
   
