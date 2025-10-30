@@ -218,7 +218,7 @@ function EditExpenseFormInline({ expense, categories, onSubmit, onCancel, isLoad
           )}
         />
 
-        <div>
+        <div style={{display:"none"}}>
           <Label>Receipt Upload</Label>
           <div className="mt-2 space-y-3">
             {/* Show uploaded receipts */}
@@ -539,7 +539,7 @@ export default function ExpenseTable({ showFilters = true, limit = 50, title = "
                     {getSortIcon('amount')}
                   </Button>
                 </TableHead>
-                <TableHead>Receipt</TableHead>
+                {/* <TableHead>Receipt</TableHead> */}
                 <TableHead>Actions</TableHead>
               </TableRow>
             </TableHeader>
@@ -568,9 +568,9 @@ export default function ExpenseTable({ showFilters = true, limit = 50, title = "
                       <div className="text-sm font-medium text-foreground" data-testid={`text-expense-date-${expense.id}`}>
                         {formatDate(expense.date)}
                       </div>
-                      <div className="text-xs text-muted-foreground" data-testid={`text-expense-time-${expense.id}`}>
+                      {/* <div className="text-xs text-muted-foreground" data-testid={`text-expense-time-${expense.id}`}>
                         {formatTime(expense.date)}
-                      </div>
+                      </div> */}
                     </TableCell>
                     <TableCell>
                       <div className="text-sm font-medium text-foreground" data-testid={`text-expense-description-${expense.id}`}>
@@ -595,7 +595,7 @@ export default function ExpenseTable({ showFilters = true, limit = 50, title = "
                         {formatCurrency(expense.amount)}
                       </div>
                     </TableCell>
-                    <TableCell>
+                    {/* <TableCell>
                       {expense.receiptPath ? (
                         <div className="flex items-center space-x-2">
                           <Paperclip className="w-4 h-4 text-secondary" />
@@ -612,7 +612,7 @@ export default function ExpenseTable({ showFilters = true, limit = 50, title = "
                       ) : (
                         <span className="text-xs text-muted-foreground">No receipt</span>
                       )}
-                    </TableCell>
+                    </TableCell> */}
                     <TableCell>
                       <div className="flex items-center space-x-2">
                         <Button

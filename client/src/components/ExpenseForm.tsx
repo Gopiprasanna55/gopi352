@@ -249,7 +249,7 @@ export default function ExpenseForm({ onSuccess, onCancel, initialData, expenseI
               />
             </div>
 
-            <div>
+            <div style={{display:"none"}}>
               <Label>Receipt Upload</Label>
               <div className="mt-2 space-y-3">
                 {/* Show uploaded receipts */}
