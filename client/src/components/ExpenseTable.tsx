@@ -133,7 +133,7 @@ function EditExpenseFormInline({ expense, categories, onSubmit, onCancel, isLoad
                   step="0.01"
                   placeholder="0.00"
                   {...field}
-                  onChange={(e) => field.onChange(parseFloat(e.target.value))}
+                 onChange={(e) => field.onChange(e.target.value.toString())}
                 />
               </FormControl>
               <FormMessage />
